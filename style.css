@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4 {
+    font-family: sans-serif;
+    margin: 0; 
+}
+
+a {
+    color: black;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+
+p {
+    font-size: 20px;
+}
+header {
+    background-color: #85c4ff;
+    padding: 20px;
+}
+
+header nav {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 0 auto;
+    max-width: 900px; 
+}
+
+
+
+header nav a {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+}
+
+header nav a:last-of-type {
+    margin-right: 0;
+}
+
+.section-wrapper {
+    background-color: #cff1ca;
+    padding: 25px;
+}
+
+.interior {
+    background-color: #9ef490;
+    border: 10px solid green;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 40px;
+} 
+
+.flex-interior {
+    display: flex; 
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 40px 0;
+}
+
+.flex-parent {
+    background-color: lightcoral;
+    border: 10px solid brown;
+    display: flex;
+    flex-basis: 40%;
+    flex-shrink: 0;
+    gap: 25px;
+    padding: 25px;
+    width: 100%;
+}
+
+.flex-parent:first-of-type {
+    flex-basis: 100%; 
+    padding: 40px;
+}
+
+.flex-parent h1 {
+    color: brown;
+}
+
+.flex-child {
+    background-color: beige;
+    border: 2px solid orange;
+    flex-basis: 33%;
+    min-height: 100px;
+}
+
+.flex-parent-stacked {
+    flex-direction: column;
+
+}
+
+.flex-child-big {
+    align-items: center;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.positioning-wrapper {
+    background: #cad7f1;
+    padding: 40px
+} 
+
+.interior--positioning {
+    background-color: #85c4ff;
+    border-color: #0e3f9e;
+    position: relative;
+    min-height: 600px;
+}
+
+.circle {
+    background-color: #cad7f1;
+    border: 5px solid #0e3f94;
+    border-radius: 50%;
+    height: 80px;
+    position: absolute;
+    width: 80px;
+}
+
+.square {
+    background-color: #cad7f1;
+    border: 5px solid #0e3f94;
+    height: 80px;
+    position: absolute;
+    width: 80px;
+}
+
+/* Static (default postioning*/
+/* Relative */
+/* Absoulte */
+/*  */
