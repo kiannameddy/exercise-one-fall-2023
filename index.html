@@ -1,145 +1,109 @@
-* {
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise One</title>
+    <link rel="stylesheet" href="style.css"/> 
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#">Box Model</a>
+            <a href="#">Flexbox</a>
+            <a href="#">Positioning Elements</a>
+            <a href="#">Heading Usage</a>
+            <a href="#">Simple Javascript</a>
+        </nav>
+    </header>
+    <main>
+        <!-- CSS Box Model Section -->
+        <section class="section-wrapper">
+            <div class="interior">
+                <h1>CSS Box Model</h1>
 
-body, h1, h2, h3, h4 {
-    font-family: sans-serif;
-    margin: 0; 
-}
+                <p>/* Padding is inside of the element in CCS */</p>
+                <p><strong>padding: 40px; (inside)</strong></p>
 
-a {
-    color: black;
-}
+                <p>/* Margin is outside of the element in CSS */</p>
+                <p><strong>margin: 40px; (outside)</strong></p>
 
-h1 {
-    font-size: 48px;
-}
+                <p>/* Border is added to width and height of element in CSS */</p>
+                <p><strong>border: 10px; soild green</strong></p>
+            </div>
+        </section>
+        <!-- Flex Box -->
+        <section>
+            <div class="flex-interior">
+                <div class="flex-parent">
+                    <div class="flex-child flex-child-big">
+                        <h1>Display: Flexbox</h1>  
+                    </div>
+                </div>
+                <div class="flex-parent">
+                    <div class="flex-child"></div>
+                    <div class="flex-child"></div>
+                    <div class="flex-child"></div>
+                </div>
+                <div class="flex-parent flex-parent-stacked">
+                    <div class="flex-child"></div>
+                    <div class="flex-child"></div>
+                    <div class="flex-child"></div>
+                </div>       
+            </div>
+        </section>
+        <!-- Positioning -->
+        <section class="positioning-wrapper">
+            <div class="interior interior--positioning">
+                <h1>Positioning Elements</h1>
+                <div class="circle" style="right: 20px; top: 300px"></div>
+                <div class="circle" style="left: 50px; bottom: 100px"></div>
+                <div class="circle" style="right: 200px; bottom: 30px"></div>
+                <div class="square" style="left: 300px; top: 300px"></div>
+                <div class="square" style="right: 30px; bottom: 20px"></div>
+            </div>
+        </section>
+        <!-- Headers-->
+        <section>
+            <div class="interior">
+                <h1>Highest level header (h1)</h1>
+                <h2>Subsection of the header one (h2)</h2>
+                <p>This is a paragraph</p>
+                <h3>Header three is a subsection of header two (h3)</h3>
+                <h4> This is a subsection of the third header (h4)</h4>
+                <p>This is a paragraph</p>
+                <p>This is a paragraph</p>
+            </div>
+        </section>
+        <!-- Simple Javascript -->
+        
+        <section>
+            <div class="interior">
+                <h1>Simple Javascript</h1>
+                <script>
+                    let count = 0;
 
+                    function increaseCount() {
+                        count = count + 1;
+                        const countIndicator = document.querySelector(".count-indicator");
+                        return (countIndicator.innerHTML = count); 
+                    }
+                    function decreaseCount() {
+                        count = count - 1;
+                        return (document.querySelector(".count-indicator").innerHTML = 
+                        count);
+                    }
+                </script>
+                <p>Count: <span class="count-indicator">0</span></p>
+                <button onClick="increaseCount()">Click to increase!</button>
+                <button onClick="decreaseCount()">Click to decrease!</button>
+            </div>
+        </section>
+    </main>
+    <footer>
 
-p {
-    font-size: 20px;
-}
-header {
-    background-color: #85c4ff;
-    padding: 20px;
-}
-
-header nav {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin: 0 auto;
-    max-width: 900px; 
-}
-
-
-
-header nav a {
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    margin: 10px;
-}
-
-header nav a:last-of-type {
-    margin-right: 0;
-}
-
-.section-wrapper {
-    background-color: #cff1ca;
-    padding: 25px;
-}
-
-.interior {
-    background-color: #9ef490;
-    border: 10px solid green;
-    margin: 0 auto;
-    max-width: 900px;
-    padding: 40px;
-} 
-
-.flex-interior {
-    display: flex; 
-    flex-wrap: wrap;
-    gap: 40px;
-    margin: 0 auto;
-    max-width: 900px;
-    padding: 40px 0;
-}
-
-.flex-parent {
-    background-color: lightcoral;
-    border: 10px solid brown;
-    display: flex;
-    flex-basis: 40%;
-    flex-shrink: 0;
-    gap: 25px;
-    padding: 25px;
-    width: 100%;
-}
-
-.flex-parent:first-of-type {
-    flex-basis: 100%; 
-    padding: 40px;
-}
-
-.flex-parent h1 {
-    color: brown;
-}
-
-.flex-child {
-    background-color: beige;
-    border: 2px solid orange;
-    flex-basis: 33%;
-    min-height: 100px;
-}
-
-.flex-parent-stacked {
-    flex-direction: column;
-
-}
-
-.flex-child-big {
-    align-items: center;
-    display: flex;
-    flex-basis: 100%;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 800px;
-}
-
-.positioning-wrapper {
-    background: #cad7f1;
-    padding: 40px
-} 
-
-.interior--positioning {
-    background-color: #85c4ff;
-    border-color: #0e3f9e;
-    position: relative;
-    min-height: 600px;
-}
-
-.circle {
-    background-color: #cad7f1;
-    border: 5px solid #0e3f94;
-    border-radius: 50%;
-    height: 80px;
-    position: absolute;
-    width: 80px;
-}
-
-.square {
-    background-color: #cad7f1;
-    border: 5px solid #0e3f94;
-    height: 80px;
-    position: absolute;
-    width: 80px;
-}
-
-/* Static (default postioning*/
-/* Relative */
-/* Absoulte */
-/*  */
+    </footer>
+    
+</body>
+</html>
